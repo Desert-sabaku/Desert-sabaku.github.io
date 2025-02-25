@@ -1,0 +1,93 @@
+:root {
+  --main-bg-color: #101010;
+  --main-font-color: rgb(121, 121, 121);
+  --accent-font-color: rgb(215, 213, 213);
+  --main-font-size: 16px;
+  --main-conent-width-ratio: 89%;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  height: 5rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--main-font-color);
+
+    h1 {
+      align-content: center;
+      font-size: 2rem;
+      margin-right: 1rem;
+      width: 100%;
+    }
+
+    .logo {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+    }
+  }
+
+  nav {
+    width: 18%;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+
+      li {
+        transition: all 0.3s;
+        color: var(--main-font-color);
+
+        &:hover {
+          cursor: pointer;
+          color: var(--accent-font-color);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  margin: auto 2rem;
+
+  main {
+    width: var(--main-conent-width-ratio);
+
+    section {
+      margin: 3rem;
+    }
+  }
+
+  aside {
+    width: calc(100% - var(--main-conent-width-ratio));
+  }
+}
+
+footer {
+  /* 最下部に固定 */
+  border-top: 1px solid var(--main-font-color);
+  width: 100%;
+  font-size: calc(var(--main-font-size) * 0.9);
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  position: fixed;
+  bottom: 0;
+}
